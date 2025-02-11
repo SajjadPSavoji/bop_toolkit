@@ -34,7 +34,7 @@ except ImportError as e:
 p = {
     # Top N pose estimates (with the highest score) to be visualized for each
     # object in each image.
-    "n_top": 0,  # 0 = all estimates, -1 = given by the number of GT poses.
+    "n_top": 5,  # 0 = all estimates, -1 = given by the number of GT poses.
     # True = one visualization for each (im_id, obj_id), False = one per im_id.
     "vis_per_obj_id": True,
     # Indicates whether to render RGB image.
@@ -45,7 +45,7 @@ p = {
     # of individual objects are blended together.
     "vis_rgb_resolve_visib": True,
     # Indicates whether to render depth image.
-    "vis_depth_diff": True,
+    "vis_depth_diff": False,
     # If to use the original model color.
     "vis_orig_color": False,
     # Type of the renderer (used for the VSD pose error function).
@@ -55,7 +55,8 @@ p = {
     # of the format. Example results can be found at:
     # https://bop.felk.cvut.cz/media/data/bop_sample_results/bop_challenge_2019_sample_results.zip
     "result_filenames": [
-        "/path/to/csv/with/results",
+        "baseline_lmo-test.csv",
+        "Exp14E8_lmo-test.csv"
     ],
     # Folder containing the BOP datasets.
     "datasets_path": config.datasets_path,
